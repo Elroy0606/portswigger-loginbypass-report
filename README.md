@@ -47,9 +47,14 @@ resulting in authentication bypass.
 
 ## Steps to Reproduce (Proof of Concept)
 
-### Step 1: Navigate to Login Page
+### Step 1: Click on My account
+<p aligh="center">
+	<img src="screenshots/HomePage.png" alt="PortSwigger HomePage"
+	width="60%">
+</p>
+
 <p align="center">
-	<img src="screenshots/02-login.png" alt="juice shop running" 
+	<img src="screenshots/loginPage.png" alt="PortSwigger Login Page" 
 	width="60%">
 </p>
 
@@ -58,13 +63,15 @@ resulting in authentication bypass.
 Enter the following payload into the Email/Username field:
 
 ```sql
-' OR 1=1--
+admin' OR 1=1--
 ```
 <p align="center">
-	<img src="screenshots/05-SQLpayload.png" alt="juice shop"
+	<img src="screenshots/sqlpayload.png" alt="SQL Payload"
 	width="60%"
 </p>
 
 ### Step 3: Enter any arbitrary string in the Password field (e.g: SomethingPassword1)
 ### Step 4: Click Login
 ### Step 5: Result
+The website proccess the query, ignores the password check due to the comment operator (--), and authenticates the user as the administrator.
+
