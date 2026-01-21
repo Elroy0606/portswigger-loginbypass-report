@@ -88,14 +88,14 @@ The website proccess the query, ignores the password check due to the comment op
   
 ---
 
-## Technical Analysis
+## 3. Technical Analysis
 The SQL injection vulnerability exists because:
 - **No Input Validation:** Username field accepts special SQL characters (‘, - -,etc.)
 - **No Parameterized Queries:** Application uses string concatenation instead of prepared statements.
 
 ---
 
-## Remediation recommendations
+## 4. Remediation recommendations
 
 To prevent this, the development team should implement the following:
 - **Use PreparedStatements:** This ensures the database treats the input as data only, not as executable code.
@@ -103,7 +103,7 @@ To prevent this, the development team should implement the following:
 
 ---
 
-## Conclusion
+## 5. Conclusion
 This penetration test successfully demonstrated a critical SQL injection vulnerability in the PortSwigger Lab login page. The vulnerability allows an unauthenticated attacker to bypass login controls and gain full administrative access using a simple payload. Implementation of parameterized queries and input validation will effectively remediate this issue. This assessment highlights the importance of secure coding practices and the need for regular security testing in application deployment.
 
 - **Report Status:** Complete
