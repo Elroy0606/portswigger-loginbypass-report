@@ -106,6 +106,7 @@ To prevent this, the development team should implement the following:
 ## 5. Conclusion
 This penetration test successfully demonstrated a critical SQL injection vulnerability in the PortSwigger Lab login page. The vulnerability allows an unauthenticated attacker to bypass login controls and gain full administrative access using a simple payload. Implementation of parameterized queries and input validation will effectively remediate this issue. This assessment highlights the importance of secure coding practices and the need for regular security testing in application deployment.
 
+### Summary
 - **Report Status:** Complete
 - **Severity Level:** High
 - **Remediation:** Timeline: Immediate
